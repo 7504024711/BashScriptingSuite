@@ -13,13 +13,7 @@ date >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
 # ------------------------------
-# 1️⃣ System Information
-# ------------------------------
-echo "==============================================" >> $OUTPUT_FILE
-echo "📦 SYSTEM INFORMATION" >> $OUTPUT_FILE
-echo "----------------------------------------------" >> $OUTPUT_FILE
-bash system_info.sh >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+
 
 # ------------------------------
 # 2️⃣ CPU Usage
@@ -40,13 +34,6 @@ bash disk_usage.sh >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
 # ------------------------------
-# 4️⃣ Top Memory Processes
-# ------------------------------
-echo "==============================================" >> $OUTPUT_FILE
-echo "⚙️ TOP PROCESSES BY MEMORY USAGE" >> $OUTPUT_FILE
-echo "----------------------------------------------" >> $OUTPUT_FILE
-bash process_monitor.sh >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
 
 # ------------------------------
 # ✅ Final Message
