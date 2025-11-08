@@ -1,24 +1,22 @@
 #!/bin/bash
-# ===============================================
-# CPU Usage Monitor Script
+# 🧠 CPU Usage Monitoring Script
 # Author: Ritesh Nayak
-# ===============================================
 
-echo "=============================================="
-echo "           CPU Usage Information"
-echo "=============================================="
+BLUE=$(tput setaf 6)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
 
-# Check if mpstat is installed
-if ! command -v mpstat &> /dev/null
-then
-    echo "mpstat not found! Installing sysstat..."
-    sudo apt-get update -y >/dev/null 2>&1
-    sudo apt-get install sysstat -y >/dev/null 2>&1
+echo "${BLUE}=============================================="
+echo "           🧠 CPU Usage Information"
+echo "==============================================${RESET}"
+
+if command -v mpstat &> /dev/null; then
+    mpstat | tail -n 5
+else
+    echo "mpstat not found! Installing sysstat package..."
+    sudo apt install -y sysstat
+    mpstat | tail -n 5
 fi
 
-# Display CPU usage summary
-mpstat 1 1 | awk '/Average:/ && $12 ~ /[0-9.]+/ {print 100 - $12 "% CPU used"}'
-
-echo "----------------------------------------------"
-echo "✅ CPU usage data fetched successfully!"
-
+echo "${BLUE}----------------------------------------------"
+echo "${GREEN}✅ CPU usage data fetched successfully!${RESET}"
