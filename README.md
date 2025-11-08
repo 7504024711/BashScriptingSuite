@@ -1,4 +1,4 @@
-# 🧠 Bash Scripting Suite for System Maintenance
+
 **Author:** Ritesh Nayak  
 **Email:** riteshnayak.dev@gmail.com  
 **Institution:** B.Tech CSE (IoT) | 3rd Year  
