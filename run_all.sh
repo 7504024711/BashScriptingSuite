@@ -1,49 +1,38 @@
 #!/bin/bash
-# ===============================================
-# Bash Scripting Suite - Automated System Report
-# Author: Ritesh Nayak
-# ===============================================
+# ==========================================
+# 🚀  System Maintenance Dashboard - Ritesh Nayak
+# ==========================================
 
-OUTPUT_FILE="system_report.txt"
+echo -e "\e[1;36m=============================================="
+echo -e "🚀  System Maintenance Dashboard - Ritesh Nayak"
+echo -e "==============================================\e[0m\n"
 
-echo "==============================================" > $OUTPUT_FILE
-echo "         🧠 BASH SCRIPTING SUITE REPORT" >> $OUTPUT_FILE
-echo "==============================================" >> $OUTPUT_FILE
-date >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+# Create/clear the report file
+REPORT_FILE="system_report.txt"
+> "$REPORT_FILE"
 
-# ------------------------------
+# 1️⃣ System Info
+echo -e "\e[1;33m🧠 Gathering System Information...\e[0m"
+./system_info.sh | tee -a "$REPORT_FILE"
+echo -e "\n"
 
-
-# ------------------------------
 # 2️⃣ CPU Usage
-# ------------------------------
-echo "==============================================" >> $OUTPUT_FILE
-echo "🧮 CPU USAGE DETAILS" >> $OUTPUT_FILE
-echo "----------------------------------------------" >> $OUTPUT_FILE
-bash cpu_usage.sh >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+echo -e "\e[1;33m⚙️ Checking CPU Usage...\e[0m"
+./cpu_usage.sh | tee -a "$REPORT_FILE"
+echo -e "\n"
 
-# ------------------------------
 # 3️⃣ Disk Usage
-# ------------------------------
-echo "==============================================" >> $OUTPUT_FILE
-echo "💽 DISK USAGE DETAILS" >> $OUTPUT_FILE
-echo "----------------------------------------------" >> $OUTPUT_FILE
-bash disk_usage.sh >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+echo -e "\e[1;33m💽 Checking Disk Usage...\e[0m"
+./disk_usage.sh | tee -a "$REPORT_FILE"
+echo -e "\n"
 
-# ------------------------------
+# 4️⃣ Process Monitor
+echo -e "\e[1;33m🧩 Checking Top Processes...\e[0m"
+./process_monitor.sh | tee -a "$REPORT_FILE"
+echo -e "\n"
 
-# ------------------------------
-# ✅ Final Message
-# ------------------------------
-echo "==============================================" >> $OUTPUT_FILE
-echo "✅ REPORT GENERATED SUCCESSFULLY!" >> $OUTPUT_FILE
-echo "==============================================" >> $OUTPUT_FILE
-
-echo ""
-echo "✨ All scripts executed successfully!"
-echo "📄 System report saved to: $OUTPUT_FILE"
-echo ""
-
+# ✅ Summary
+echo -e "\e[1;32m=============================================="
+echo -e "✅ All system checks completed successfully!"
+echo -e "📄 Report saved as: system_report.txt"
+echo -e "==============================================\e[0m"
