@@ -1,40 +1,37 @@
-
-**Author:** Ritesh Nayak  
-**Email:** riteshnayak.dev@gmail.com  
-**Institution:** B.Tech CSE (IoT) | 3rd Year  
-**Year:** 2025  
+# 🧠 Bash Scripting Suite for System Maintenance  
+### 👨‍💻 Developed by *Ritesh Nayak*  
+> A lightweight and efficient toolkit for automating essential Linux system monitoring and maintenance tasks using Bash scripting.
 
 ---
 
-## 📘 Project Overview
-This project is a **collection of Bash scripts** designed to automate essential **Linux system maintenance tasks** such as monitoring CPU usage, disk usage, system info, and active processes.  
-It helps system administrators and learners understand how shell scripting can simplify routine system health monitoring.
+## 🚀 Overview
+
+The **Bash Scripting Suite** is designed to help system administrators and Linux enthusiasts quickly gather system information, monitor CPU & disk usage, and check running processes — all through automated scripts.  
+This project is part of my *System Automation* assignment and demonstrates core Bash scripting principles like file handling, process management, and system resource monitoring.
 
 ---
 
-## ⚙️ Features
-✅ Displays **system information** (OS, kernel, uptime)  
-✅ Shows **CPU usage** in real time  
-✅ Provides **disk space utilization** report  
-✅ Lists **top memory-consuming processes**  
-✅ Generates a **complete report file** (`system_report.txt`) using `run_all.sh`  
+## 🧩 Features
+
+✅ **System Information** — Displays OS, kernel, architecture, and hardware details  
+⚙️ **CPU Usage** — Monitors real-time CPU load and usage percentage  
+💽 **Disk Usage** — Provides detailed disk utilization stats  
+🧠 **Process Monitor** — Lists top 5 memory-consuming processes  
+📄 **Run All Script** — Automatically executes all scripts and generates a complete report  
 
 ---
 
-## 🧩 Files Description
-| File | Description |
-|------|--------------|
-| `system_info.sh` | Displays detailed system info |
-| `cpu_usage.sh` | Monitors CPU usage percentage |
-| `disk_usage.sh` | Displays disk usage summary |
-| `process_monitor.sh` | Lists top 10 memory-heavy processes |
-| `run_all.sh` | Executes all scripts and generates report |
+## 📂 File Structure
+
 
 ---
 
-## 🖥️ How to Run
-### 1️⃣ Clone the Repository
+## ⚙️ How to Run
+
+1️⃣ **Clone this repository**
 ```bash
-git clone git@github.com:7504024711/Bash-Scripting-Suite-for-System-Maintenance.git
-cd Bash-Scripting-Suite-for-System-Maintenance
-
+git clone git@github.com:RiteshNayak24/BashScriptingSuite.git
+cd BashScriptingSuite
+chmod +x *.sh
+./run_all.sh
+cat system_report.txt
